@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Presence and Value Selectors</title>
+    <style>
+      p[para] {
+        color: red;
+      }
+      p[class="para"] {
+        color: maroon;
+      }
+
+      /*Exact Match*/
+      p[class~="paragraph"] {
+        color: red;
+      }
+
+      /* Partial Match*/
+      p[class|="para"] {
+        color: rgb(60, 0, 128);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p para>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis
+        aliquid consequatur eius placeat nobis vel.
+        <span inner>
+          <a href="https://paulinesafrica.org">Ream More</a>
+        </span>
+      </p>
+      <p class="para">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias omnis
+        eveniet ducimus officia numquam voluptate nisi voluptates ab consequatur
+        molestias minima aperiam, pariatur deleniti sapiente iste non veniam
+        dolor eum dolores quidem et quis unde error! Consequatur quas libero
+        amet ullam quidem maxime nesciunt beatae labore quo? Pariatur, porro
+        ullam!
+      </p>
+
+      <p class="paragraph">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias omnis
+        eveniet ducimus officia numquam voluptate nisi voluptates ab consequatur
+        molestias minima aperiam, pariatur deleniti sapiente iste non veniam
+        dolor eum dolores quidem et quis unde error! Consequatur quas libero
+        amet ullam quidem maxime nesciunt beatae labore quo? Pariatur, porro
+        ullam!
+      </p>
+    </div>
+  </body>
+</html>
