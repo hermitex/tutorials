@@ -14,10 +14,16 @@
     <style>
       .wrapper {
         display: flex;
+        flex-wrap: wrap-reverse;
       }
-      /* .wrapper > div {
+      .wrapper > div:nth-child(odd) {
+        background-color: blueviolet;
+        flex: 2;
+      }
+      .wrapper > div:nth-child(even) {
+        background-color: pink;
         flex: 1;
-      } */
+      }
     </style>
   </head>
   <body>
@@ -25,6 +31,22 @@
       <div class="box1">One</div>
       <div class="box2">Two</div>
       <div class="box3">Three</div>
+      <div class="box1">One</div>
+      <div class="box2">Two</div>
+      <div class="box3">Three</div>
+      <div class="box1">One</div>
+      <div class="box2">Two</div>
+      <div class="box3">Three</div>
+      <div class="box1">One</div>
+      <div class="box2">Two</div>
+      <div class="box3">Three</div>
+      <div class="box1">One</div>
+      <div class="box2">Two</div>
+      <div class="box3">Three</div>
     </div>
+
+    <!-- Show flex direction -->
+    <!-- Show wrapping -->
+    <!-- show flex size i.e flex:2 -->
   </body>
 </html>
