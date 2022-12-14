@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#add-todo-btn{
+    background-color: blue;
+    color: white;
+}
