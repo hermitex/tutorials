@@ -1,13 +1,57 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    height: 50vh;
-    width: 90vw;
-    justify-content: center;
-    align-items: center;
+body {
+  padding: 5rem;
+  width: 100vw;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  /* width: 90vw; */
+  justify-content: center;
+  align-items: center;
 }
 
-#add-todo-btn{
-    background-color: blue;
-    color: white;
+li {
+  list-style: none;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0.5rem;
+  /* width: 30vw; */
+}
+
+li:nth-child(odd) {
+  background-color: rgba(128, 128, 128, 0.61);
+}
+li:nth-child(even) {
+  background-color: rgba(128, 128, 128, 0.918);
+}
+
+li span button {
+  color: #fff;
+  background-color: red;
+  outline: none;
+  border: none;
+  padding: 0.1rem 1rem;
+  border-radius: 0.2rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+li span {
+  order: -1;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+li input:hover {
+  cursor: pointer;
+}
+
+#add-todo-btn {
+  background-color: blue;
+  color: white;
 }
