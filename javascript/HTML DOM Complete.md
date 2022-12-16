@@ -21,7 +21,7 @@ const element = document.getElementById('my-element');
 The getElementsByTagName method returns a list of elements with the specified tag name from the DOM. It returns a live HTMLCollection, which means that it updates automatically as elements are added or removed from the DOM.
 Example:
 ```js
-const elements = document.getElementsByTagName('p');
+const elements = document.getElementsByTagName('a');
 ```
 ## How to use querySelector to access an element using a CSS selector
 
@@ -31,23 +31,32 @@ Example:
 const element = document.querySelector('#my-element .my-class');
 ```
 ## Modifying Elements
-How to use innerHTML to modify the content of an element
+## How to use innerHTML to modify the content of an element
+
 The innerHTML property represents the HTML content of an element. You can use it to get or set the HTML content of an element.
 Example:
 ```js
 element.innerHTML = '<p>Hello, World!</p>';
+
+element.textContent = 'Hello World!'
+
+element.innerText = 'Hello World!'
 ```
 ## How to use setAttribute to modify an attribute of an element
 The setAttribute method sets the value of an attribute on an element. It takes two arguments: the name of the attribute and the value to set.
 Example:
 ```js
 element.setAttribute('href', 'http://example.com');
+
+// <a href='http://example.com'></a>
 ```
 ## How to use style to modify the style of an element
 The style property represents the inline style of an element. You can use it to get or set the style of an element using JavaScript.
 Example:
 ```js
 element.style.color = 'red'
+
+// <p style="color: red;">Text color red</p>
 ```
 
 ## Traversing the DOM Tree
@@ -76,6 +85,7 @@ Example:
 const newElement = document.createElement('div');
 ```
 ### How to use appendChild to add an element as a child of another element
+
 The appendChild method adds an element as the last child of another element.
 Example:
 ```js
@@ -100,10 +110,13 @@ element.addEventListener('click', () => {
 ```
 Examples of common events, such as clicks, hover, and form submissions
 Some common events that you might want to listen for include:
+
 **click:** triggered when an element is clicked
 mouseover and mouseout: triggered when the mouse enters or leaves an element
+
 **submit:** triggered when a form is submitted
 focus and
+
 **blur:** triggered when an element receives or loses focus
 ## Working with Documents
 ### How to use document.title to access and modify the title of a document
@@ -132,3 +145,45 @@ Some other useful properties and methods for working with documents include:
 **document.getElementsByName:** returns a list of elements with the specified name
 
 **document.querySelectorAll:** returns a list of elements that match the specified CSS selector
+
+
+
+
+# What is the DOM and how does it work?
+
+The DOM (Document Object Model) is a programming interface for HTML and XML documents. It represents the structure of a document as a tree of objects, with each object representing an element in the document.
+
+The DOM allows developers to access and manipulate the content, structure, and style of a document using programming languages like JavaScript.
+The DOM represents the document as a hierarchy of objects, with the document object at the root of the tree. Each object in the tree represents an element in the document, and has properties and methods that correspond to the attributes and content of the element.
+
+# How can you use the DOM to manipulate HTML and CSS on a webpage?
+
+You can use the DOM to modify the content of an HTML element by setting the innerHTML property of the element object.
+You can use the DOM to add, delete, and modify the attributes of an HTML element by using the setAttribute and removeAttribute methods.
+You can use the DOM to change the style of an HTML element by setting the style property of the element object.
+You can use the DOM to change the CSS class of an element by setting the className property or by using the classList object.
+
+# How do you access and modify elements in the DOM using JavaScript?
+
+You can access elements in the DOM using methods like getElementById, getElementsByTagName, and querySelector.
+You can also access elements using the document.children property or by traversing the DOM tree using the parentNode, nextSibling, and previousSibling properties.
+Once you have a reference to an element, you can modify its content, attributes, and style using the properties and methods of the element object.
+
+# How do you traverse the DOM tree to find specific elements?
+
+You can use the children property of an element object to access its child elements.
+You can use the parentNode property of an element object to access its parent element.
+You can use the nextSibling and previousSibling properties of an element object to access its sibling elements.
+You can use a combination of these properties and a loop to traverse the DOM tree and find specific elements.
+
+# What are the different ways to create and delete elements in the DOM?
+
+You can create new elements using the createElement method of the document object.
+You can add the new element to the DOM tree by using the appendChild or insertBefore method of an existing element.
+You can delete an element from the DOM tree by using the removeChild or replaceChild method of its parent element.
+
+# How do you handle events in the DOM, such as clicks or hover events?
+
+You can register event handlers for elements in the DOM using the addEventListener method of the element object.
+You can specify the type of event (such as click, mouseover, or submit) and a function to be called when the event occurs.
+You can also use the traditional event properties and attributes (such as onclick and onmouseover) to register event handlers.

@@ -55,6 +55,10 @@ todoForm.addEventListener("submit", (event) => {
 
 // Checking items as done
 
-document.addEventListener("mousemove", (event) => {
-  document.body.style.backgroundColor = `#${Math.floor(Math.random() * 1000)}`;
+todoInput.addEventListener("blur", (event) => {
+  alert("Input blurred");
 });
+
+// todoInput.addEventListener("focus", (event) => {
+//   alert("Input focused");
+// });
